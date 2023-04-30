@@ -10,7 +10,7 @@ To change the image input, put the image path into the first line of the `doAll(
 Running the above command will cause a pop-up which displays the final FaceSwap image.
 
 The results of Face swap done by Triangulation method is shown below:
-![Triangulation] (C:\Users\Venk\Downloads\Structure-from-Motion-NeRF-master\DeepFakes-\Data\Triangulation_output.png)
+![Triangulation] (https://github.com/venk221/DeepFakes-/blob/main/Data/Triangulation_output.png)
 
 1) To run the Thin Plate Spline:
 
