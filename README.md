@@ -4,7 +4,7 @@ The input to both the models is a picture of us (Shounak and Me) and is given be
 
 ![Input](Data/input.png)
 
-1) To run the Delenauy triangulation:
+1) To run the Delaunay triangulation:
 
 Run `python3 Wrapper.py`
 
