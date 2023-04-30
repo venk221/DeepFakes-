@@ -5,21 +5,13 @@ import math
 import dlib
 import cv2
 import matplotlib.pyplot as plt
-
 import pickle
 import copy
 import random
 import math
-
 from scipy import interpolate
-
-
-
-
-
-"""TPS"""
 import copy
-
+"""TPS"""
 
 def getFacialFeatures(image):
 
@@ -194,26 +186,17 @@ def Inter(Fx,Fy, point_matrix_face_1, mask_face,Fx_2,Fy_2,point_matrix_face_2,ma
         temp_img[y,x,1]=z_y      #x,y
         temp_img[y,x,2]=z_z      #y,x  
 
-
-
-
-
     face2_rectangle=faces_rectangle[1]
 
     x_range_min,x_range_max=face2_rectangle.left(),face2_rectangle.right()
     y_range_min,y_range_max=face2_rectangle.top(),face2_rectangle.bottom()
-
-    
-
     src=base_img[y_range_min:y_range_max,x_range_min:x_range_max]
-
-   
+  
     dst=temp_img.copy()
 
     face1_rectangle=faces_rectangle[0]
     x_range_min,x_range_max=face1_rectangle.left(),face1_rectangle.right()
     y_range_min,y_range_max=face1_rectangle.top(),face1_rectangle.bottom()
-
 
     center=(int((y_range_min+y_range_max)/2),int((x_range_max+x_range_min)/2))
     mask=mask_from_points((src.shape[0],src.shape[1]), f2_points, erode_flag=0)
@@ -248,17 +231,12 @@ def Inter(Fx,Fy, point_matrix_face_1, mask_face,Fx_2,Fy_2,point_matrix_face_2,ma
         temp_img[y,x,1]=z_y      #x,y
         temp_img[y,x,2]=z_z      #y,x  
 
-
-    
+ 
     face1_rectangle=faces_rectangle[0]
-
     x_range_min,x_range_max=face1_rectangle.left(),face1_rectangle.right()
     y_range_min,y_range_max=face1_rectangle.top(),face1_rectangle.bottom()
 
-    
-
     src=base_img[y_range_min:y_range_max,x_range_min:x_range_max]
-
    
     dst=temp_img.copy()
 
@@ -315,11 +293,7 @@ def doAll():
   Fx_2 = FXtoY(point_matrix_face_1, point_matrix_face_2, f2_points, f2_points, Wx_2, 'twotoone')
   Fy_2 = FXtoY(point_matrix_face_1, point_matrix_face_2, f2_points, f2_points, Wy_2, 'twotoone')
 
-
   zX, zY, zZ = Inter(Fx,Fy,point_matrix_face_1, maskFace1,Fx_2,Fy_2,point_matrix_face_2,maskFace2,base_img,faces_rectangle,f1_points,f2_points)
-
-
-
 
 
 doAll()
