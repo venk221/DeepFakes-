@@ -1,4 +1,4 @@
-#DeepFakes: Warping and Swapping Faces
+# DeepFakes: Warping and Swapping Faces
 
 The code can be found in the `Code` folder.
 The Data files can be found in the `Data` folder. 
